@@ -7,11 +7,16 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<%
+	String pagePath = request.getParameter("pagePath");
+	if (pagePath == null || pagePath == "") {
+		//초기페이지
+		pagePath = "/WEB-INF/views/menu/home.jsp";	
+	}
+%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <script>
-function changeIframeUrl(url) {
-    document.getElementById("mainFrame").src = url;
-}
+
 </script>
 <head>
     <meta name="keywords" content="" />
@@ -25,12 +30,13 @@ function changeIframeUrl(url) {
 	<div id="bg">
 		<div id="outer">
 			<!-- header -->
-			<%@ include file="/WEB-INF/views/include/header.jsp" %>
+			<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 			<!-- main -->
-			<%@ include file="/WEB-INF/views/include/main.jsp" %>
-<%-- 			<%@ include file="/WEB-INF/views/menu/home.jsp" %> --%>
+			<div id="main">
+				<jsp:include page="<%=pagePath%>"/>
+			</div>
 			<!-- footer --> 
-			<%@ include file="/WEB-INF/views/include/footer.jsp" %>
+			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 		</div>
 	</div>
 </body>

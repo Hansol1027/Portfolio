@@ -11,6 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 </head>
 <body>
-	포트폴리오
+	게시판
 </body>
 </html>
