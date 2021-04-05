@@ -35,4 +35,26 @@ public class MainController {
 		
 		return "index";
 	}
+	
+	@RequestMapping("/getUserList")
+    private String getUserList() throws Exception {
+		logger.info("getUserList");
+        /*
+		//@ModelAttribute UserVO inVO
+		
+        //서비스에서 사용자 리스트 조회
+        List<UserVO> userList = userMgmtSvc.selectUserList(inVO);
+ 
+        //클라이언트로 값 전송을 위해 WrapperVO로 감싸기
+        WrapperVO rtnVO = new WrapperVO();
+        rtnVO.setAaData(userList);
+        
+        //json string으로 parsing
+        String jsonString = JsonUtil.objectToJsonString(rtnVO);
+        
+        return jsonString;
+        */
+		
+		return null;
+    }
 }
